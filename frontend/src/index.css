@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Chivo:wght@300;700;900&family=Inter:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600&family=Inter:wght@400;500;600&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -48,6 +48,9 @@ code {
     }
     body {
         @apply bg-[#F8FAFB] text-[#1A1A2E];
+    }
+    h1, h2, h3, h4, h5, h6, .font-heading {
+        font-weight: 600 !important;
     }
 }
 

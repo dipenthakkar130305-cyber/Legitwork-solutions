@@ -42,7 +42,7 @@ module.exports = {
         },
       },
       fontFamily: {
-        heading: ['Chivo', 'DM Sans', 'sans-serif'],
+        heading: ['Roboto', 'sans-serif'],
         body: ['Inter', 'Source Sans Pro', 'sans-serif'],
       },
       borderRadius: {

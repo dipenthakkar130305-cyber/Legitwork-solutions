@@ -46,7 +46,7 @@ const Header = () => {
             {/* Logo */}
             <Link to="/" data-testid="logo-link" className="flex items-center">
               <img
-                src="https://customer-assets.emergentagent.com/job_39b13cfe-8089-4313-8ef7-19e2ecfe68f6/artifacts/zf2emfp3_WhatsApp%20Image%202026-03-22%20at%202.56.57%20PM.jpeg"
+                src="https://customer-assets.emergentagent.com/job_hr-solutions-india/artifacts/7q0neasl_WhatsApp_Image_2026-03-22_at_2.56.57_PM-removebg-preview.png"
                 alt="LegitWork Solutions LLP"
                 className="h-12 md:h-14 w-auto"
               />

@@ -320,85 +320,108 @@ const LabourLaws = () => {
 
           {/* Laws Accordion */}
           <div className="max-w-6xl mx-auto">
-            <Accordion type="single" collapsible className="space-y-4">
-              {/* Group 1: Code on Wages */}
-              <div className="border-l-4 border-primary pl-6">
-                <h3 className="font-heading font-bold text-xl text-primary mb-4">Code on Wages, 2019 (4 Laws)</h3>
-                
-                <AccordionItem value="wages-1" className="bg-white border border-[#0D4C73]/10 rounded-xl mb-3 px-6">
-                  <AccordionTrigger className="hover:no-underline">
-                    <span className="font-heading font-bold text-[#1A1A2E]">The Payment of Wages Act, 1936</span>
-                  </AccordionTrigger>
-                  <AccordionContent className="text-[#4A5568] leading-relaxed">
-                    Ensures timely payment of wages to employees without unauthorized deductions. Applies to factories and establishments with a wage ceiling. Now universalized under the Wage Code.
-                  </AccordionContent>
-                </AccordionItem>
+            <Accordion type="single" collapsible className="space-y-6">
+              {/* Group 1: Code on Wages - Main Accordion */}
+              <AccordionItem value="group-wages" className="bg-white border-2 border-primary/30 rounded-2xl px-6">
+                <AccordionTrigger className="hover:no-underline py-6">
+                  <div className="flex items-center">
+                    <div className="w-1 h-8 bg-primary rounded mr-4"></div>
+                    <span className="font-heading font-bold text-xl text-primary">Code on Wages, 2019 (4 Laws)</span>
+                  </div>
+                </AccordionTrigger>
+                <AccordionContent>
+                  <Accordion type="single" collapsible className="space-y-3 mt-4">
+                    <AccordionItem value="wages-1" className="bg-[#F8FAFB] border border-[#0D4C73]/10 rounded-xl px-6">
+                      <AccordionTrigger className="hover:no-underline">
+                        <span className="font-heading font-bold text-[#1A1A2E]">The Payment of Wages Act, 1936</span>
+                      </AccordionTrigger>
+                      <AccordionContent className="text-[#4A5568] leading-relaxed">
+                        Ensures timely payment of wages to employees without unauthorized deductions. Applies to factories and establishments with a wage ceiling. Now universalized under the Wage Code.
+                      </AccordionContent>
+                    </AccordionItem>
 
-                <AccordionItem value="wages-2" className="bg-white border border-[#0D4C73]/10 rounded-xl mb-3 px-6">
-                  <AccordionTrigger className="hover:no-underline">
-                    <span className="font-heading font-bold text-[#1A1A2E]">The Minimum Wages Act, 1948</span>
-                  </AccordionTrigger>
-                  <AccordionContent className="text-[#4A5568] leading-relaxed">
-                    Mandates minimum rates of wages for scheduled employments fixed by Central/State governments. The Wage Code introduces a universal floor wage applicable across all sectors.
-                  </AccordionContent>
-                </AccordionItem>
+                    <AccordionItem value="wages-2" className="bg-[#F8FAFB] border border-[#0D4C73]/10 rounded-xl px-6">
+                      <AccordionTrigger className="hover:no-underline">
+                        <span className="font-heading font-bold text-[#1A1A2E]">The Minimum Wages Act, 1948</span>
+                      </AccordionTrigger>
+                      <AccordionContent className="text-[#4A5568] leading-relaxed">
+                        Mandates minimum rates of wages for scheduled employments fixed by Central/State governments. The Wage Code introduces a universal floor wage applicable across all sectors.
+                      </AccordionContent>
+                    </AccordionItem>
 
-                <AccordionItem value="wages-3" className="bg-white border border-[#0D4C73]/10 rounded-xl mb-3 px-6">
-                  <AccordionTrigger className="hover:no-underline">
-                    <span className="font-heading font-bold text-[#1A1A2E]">The Payment of Bonus Act, 1965</span>
-                  </AccordionTrigger>
-                  <AccordionContent className="text-[#4A5568] leading-relaxed">
-                    Requires payment of annual bonus to employees earning below a prescribed limit in establishments with 20+ employees. Bonus ranges from 8.33% to 20% of wages.
-                  </AccordionContent>
-                </AccordionItem>
+                    <AccordionItem value="wages-3" className="bg-[#F8FAFB] border border-[#0D4C73]/10 rounded-xl px-6">
+                      <AccordionTrigger className="hover:no-underline">
+                        <span className="font-heading font-bold text-[#1A1A2E]">The Payment of Bonus Act, 1965</span>
+                      </AccordionTrigger>
+                      <AccordionContent className="text-[#4A5568] leading-relaxed">
+                        Requires payment of annual bonus to employees earning below a prescribed limit in establishments with 20+ employees. Bonus ranges from 8.33% to 20% of wages.
+                      </AccordionContent>
+                    </AccordionItem>
 
-                <AccordionItem value="wages-4" className="bg-white border border-[#0D4C73]/10 rounded-xl mb-3 px-6">
-                  <AccordionTrigger className="hover:no-underline">
-                    <span className="font-heading font-bold text-[#1A1A2E]">The Equal Remuneration Act, 1976</span>
-                  </AccordionTrigger>
-                  <AccordionContent className="text-[#4A5568] leading-relaxed">
-                    Prohibits gender-based wage discrimination for same or similar work. Mandates equal pay for men and women and prevents discrimination in recruitment.
-                  </AccordionContent>
-                </AccordionItem>
-              </div>
+                    <AccordionItem value="wages-4" className="bg-[#F8FAFB] border border-[#0D4C73]/10 rounded-xl px-6">
+                      <AccordionTrigger className="hover:no-underline">
+                        <span className="font-heading font-bold text-[#1A1A2E]">The Equal Remuneration Act, 1976</span>
+                      </AccordionTrigger>
+                      <AccordionContent className="text-[#4A5568] leading-relaxed">
+                        Prohibits gender-based wage discrimination for same or similar work. Mandates equal pay for men and women and prevents discrimination in recruitment.
+                      </AccordionContent>
+                    </AccordionItem>
+                  </Accordion>
+                </AccordionContent>
+              </AccordionItem>
 
-              {/* Group 2: Industrial Relations Code */}
-              <div className="border-l-4 border-accent pl-6">
-                <h3 className="font-heading font-bold text-xl text-accent mb-4">Industrial Relations Code, 2020 (3 Laws)</h3>
-                
-                <AccordionItem value="ir-1" className="bg-white border border-[#0D4C73]/10 rounded-xl mb-3 px-6">
-                  <AccordionTrigger className="hover:no-underline">
-                    <span className="font-heading font-bold text-[#1A1A2E]">The Trade Unions Act, 1926</span>
-                  </AccordionTrigger>
-                  <AccordionContent className="text-[#4A5568] leading-relaxed">
-                    Provides for registration and regulation of trade unions, granting them legal status and immunity for legitimate trade union activities.
-                  </AccordionContent>
-                </AccordionItem>
+              {/* Group 2: Industrial Relations Code - Main Accordion */}
+              <AccordionItem value="group-ir" className="bg-white border-2 border-accent/30 rounded-2xl px-6">
+                <AccordionTrigger className="hover:no-underline py-6">
+                  <div className="flex items-center">
+                    <div className="w-1 h-8 bg-accent rounded mr-4"></div>
+                    <span className="font-heading font-bold text-xl text-accent">Industrial Relations Code, 2020 (3 Laws)</span>
+                  </div>
+                </AccordionTrigger>
+                <AccordionContent>
+                  <Accordion type="single" collapsible className="space-y-3 mt-4">
+                    <AccordionItem value="ir-1" className="bg-[#F8FAFB] border border-[#0D4C73]/10 rounded-xl px-6">
+                      <AccordionTrigger className="hover:no-underline">
+                        <span className="font-heading font-bold text-[#1A1A2E]">The Trade Unions Act, 1926</span>
+                      </AccordionTrigger>
+                      <AccordionContent className="text-[#4A5568] leading-relaxed">
+                        Provides for registration and regulation of trade unions, granting them legal status and immunity for legitimate trade union activities.
+                      </AccordionContent>
+                    </AccordionItem>
 
-                <AccordionItem value="ir-2" className="bg-white border border-[#0D4C73]/10 rounded-xl mb-3 px-6">
-                  <AccordionTrigger className="hover:no-underline">
-                    <span className="font-heading font-bold text-[#1A1A2E]">The Industrial Employment (Standing Orders) Act, 1946</span>
-                  </AccordionTrigger>
-                  <AccordionContent className="text-[#4A5568] leading-relaxed">
-                    Requires employers in industrial establishments (now 300+ workers under the new Code) to define conditions of employment through standing orders covering classification, shifts, leave, termination etc.
-                  </AccordionContent>
-                </AccordionItem>
+                    <AccordionItem value="ir-2" className="bg-[#F8FAFB] border border-[#0D4C73]/10 rounded-xl px-6">
+                      <AccordionTrigger className="hover:no-underline">
+                        <span className="font-heading font-bold text-[#1A1A2E]">The Industrial Employment (Standing Orders) Act, 1946</span>
+                      </AccordionTrigger>
+                      <AccordionContent className="text-[#4A5568] leading-relaxed">
+                        Requires employers in industrial establishments (now 300+ workers under the new Code) to define conditions of employment through standing orders covering classification, shifts, leave, termination etc.
+                      </AccordionContent>
+                    </AccordionItem>
 
-                <AccordionItem value="ir-3" className="bg-white border border-[#0D4C73]/10 rounded-xl mb-3 px-6">
-                  <AccordionTrigger className="hover:no-underline">
-                    <span className="font-heading font-bold text-[#1A1A2E]">The Industrial Disputes Act, 1947</span>
-                  </AccordionTrigger>
-                  <AccordionContent className="text-[#4A5568] leading-relaxed">
-                    Governs investigation and settlement of industrial disputes including layoffs, retrenchment, and closure. Establishments with 300+ workers now need prior government permission for retrenchment.
-                  </AccordionContent>
-                </AccordionItem>
-              </div>
+                    <AccordionItem value="ir-3" className="bg-[#F8FAFB] border border-[#0D4C73]/10 rounded-xl px-6">
+                      <AccordionTrigger className="hover:no-underline">
+                        <span className="font-heading font-bold text-[#1A1A2E]">The Industrial Disputes Act, 1947</span>
+                      </AccordionTrigger>
+                      <AccordionContent className="text-[#4A5568] leading-relaxed">
+                        Governs investigation and settlement of industrial disputes including layoffs, retrenchment, and closure. Establishments with 300+ workers now need prior government permission for retrenchment.
+                      </AccordionContent>
+                    </AccordionItem>
+                  </Accordion>
+                </AccordionContent>
+              </AccordionItem>
 
               {/* Continuing in next message due to length... */}
 
-              {/* Group 3: Code on Social Security */}
-              <div className="border-l-4 border-secondary pl-6">
-                <h3 className="font-heading font-bold text-xl text-secondary mb-4">Code on Social Security, 2020 (9 Laws)</h3>
+              {/* Group 3: Code on Social Security - Main Accordion */}
+              <AccordionItem value="group-ss" className="bg-white border-2 border-secondary/30 rounded-2xl px-6">
+                <AccordionTrigger className="hover:no-underline py-6">
+                  <div className="flex items-center">
+                    <div className="w-1 h-8 bg-secondary rounded mr-4"></div>
+                    <span className="font-heading font-bold text-xl text-secondary">Code on Social Security, 2020 (9 Laws)</span>
+                  </div>
+                </AccordionTrigger>
+                <AccordionContent>
+                  <Accordion type="single" collapsible className="space-y-3 mt-4">{/* I'll add all 9 laws here - abbreviated for space */}
                 
                 <AccordionItem value="ss-1" className="bg-white border border-[#0D4C73]/10 rounded-xl mb-3 px-6">
                   <AccordionTrigger className="hover:no-underline">
@@ -472,7 +495,7 @@ const LabourLaws = () => {
                   </AccordionContent>
                 </AccordionItem>
 
-                <AccordionItem value="ss-9" className="bg-white border border-[#0D4C73]/10 rounded-xl mb-3 px-6">
+                <AccordionItem value="ss-9" className="bg-[#F8FAFB] border border-[#0D4C73]/10 rounded-xl px-6">
                   <AccordionTrigger className="hover:no-underline">
                     <span className="font-heading font-bold text-[#1A1A2E]">The Unorganised Workers' Social Security Act, 2008</span>
                   </AccordionTrigger>
@@ -480,11 +503,20 @@ const LabourLaws = () => {
                     Framework for social security schemes (life/disability insurance, health, old age protection) for workers in the unorganised sector. The new Code extends this to gig and platform workers.
                   </AccordionContent>
                 </AccordionItem>
-              </div>
+                  </Accordion>
+                </AccordionContent>
+              </AccordionItem>
 
-              {/* Group 4: OSH Code - First 7 laws */}
-              <div className="border-l-4 border-primary pl-6">
-                <h3 className="font-heading font-bold text-xl text-primary mb-4">Occupational Safety, Health & Working Conditions Code, 2020 (13 Laws)</h3>
+              {/* Group 4: OSH Code - Main Accordion */}
+              <AccordionItem value="group-osh" className="bg-white border-2 border-primary/30 rounded-2xl px-6">
+                <AccordionTrigger className="hover:no-underline py-6">
+                  <div className="flex items-center">
+                    <div className="w-1 h-8 bg-primary rounded mr-4"></div>
+                    <span className="font-heading font-bold text-xl text-primary">Occupational Safety, Health & Working Conditions Code, 2020 (13 Laws)</span>
+                  </div>
+                </AccordionTrigger>
+                <AccordionContent>
+                  <Accordion type="single" collapsible className="space-y-3 mt-4">
                 
                 <AccordionItem value="osh-1" className="bg-white border border-[#0D4C73]/10 rounded-xl mb-3 px-6">
                   <AccordionTrigger className="hover:no-underline">
@@ -594,7 +626,7 @@ const LabourLaws = () => {
                   </AccordionContent>
                 </AccordionItem>
 
-                <AccordionItem value="osh-13" className="bg-white border border-[#0D4C73]/10 rounded-xl mb-3 px-6">
+                <AccordionItem value="osh-13" className="bg-[#F8FAFB] border border-[#0D4C73]/10 rounded-xl px-6">
                   <AccordionTrigger className="hover:no-underline">
                     <span className="font-heading font-bold text-[#1A1A2E]">The Building and Other Construction Workers (Regulation of Employment and Conditions of Service) Act, 1996</span>
                   </AccordionTrigger>
@@ -602,7 +634,9 @@ const LabourLaws = () => {
                     Regulates employment and conditions of service of building and construction workers, mandating safety measures, welfare provisions, and registration with welfare boards.
                   </AccordionContent>
                 </AccordionItem>
-              </div>
+                  </Accordion>
+                </AccordionContent>
+              </AccordionItem>
             </Accordion>
 
             {/* Transition Note */}

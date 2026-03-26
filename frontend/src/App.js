@@ -11,6 +11,7 @@ import Gallery from "@/pages/Gallery";
 import Clients from "@/pages/Clients";
 import Blog from "@/pages/Blog";
 import Contact from "@/pages/Contact";
+import PaymentPortals from "@/pages/PaymentPortals";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
             <Route path="/clients" element={<Clients />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/payment-portals" element={<PaymentPortals />} />
           </Routes>
         </Layout>
       </BrowserRouter>

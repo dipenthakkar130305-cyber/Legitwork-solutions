@@ -17,11 +17,13 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* About Column */}
           <div>
-            <img
-              src="https://customer-assets.emergentagent.com/job_hr-solutions-india/artifacts/7q0neasl_WhatsApp_Image_2026-03-22_at_2.56.57_PM-removebg-preview.png"
-              alt="LegitWork Solutions LLP"
-              className="h-12 w-auto mb-4"
-            />
+            <div className="bg-white rounded-lg p-3 inline-block mb-4">
+              <img
+                src="https://customer-assets.emergentagent.com/job_hr-solutions-india/artifacts/7q0neasl_WhatsApp_Image_2026-03-22_at_2.56.57_PM-removebg-preview.png"
+                alt="LegitWork Solutions LLP"
+                className="h-12 w-auto"
+              />
+            </div>
             <p className="text-white/80 text-sm leading-relaxed mb-4">
               Your trusted partner in labour law compliance and workforce solutions across India.
             </p>
@@ -137,6 +139,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/services#compliance"
+                  onClick={() => window.scrollTo(0, 0)}
                   data-testid="footer-service-compliance"
                   className="text-white/70 hover:text-accent transition-colors text-sm"
                 >
@@ -146,6 +149,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/services#payroll"
+                  onClick={() => window.scrollTo(0, 0)}
                   data-testid="footer-service-payroll"
                   className="text-white/70 hover:text-accent transition-colors text-sm"
                 >
@@ -155,6 +159,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/services#staffing"
+                  onClick={() => window.scrollTo(0, 0)}
                   data-testid="footer-service-staffing"
                   className="text-white/70 hover:text-accent transition-colors text-sm"
                 >
@@ -164,6 +169,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/services#consulting"
+                  onClick={() => window.scrollTo(0, 0)}
                   data-testid="footer-service-consulting"
                   className="text-white/70 hover:text-accent transition-colors text-sm"
                 >
@@ -173,6 +179,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/services#audit"
+                  onClick={() => window.scrollTo(0, 0)}
                   data-testid="footer-service-audit"
                   className="text-white/70 hover:text-accent transition-colors text-sm"
                 >
@@ -182,6 +189,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/services#licence"
+                  onClick={() => window.scrollTo(0, 0)}
                   data-testid="footer-service-licence"
                   className="text-white/70 hover:text-accent transition-colors text-sm"
                 >
@@ -203,13 +211,22 @@ const Footer = () => {
               </li>
               <li className="flex items-center space-x-3">
                 <Phone size={20} weight="fill" className="text-accent flex-shrink-0" />
-                <a
-                  href="tel:+917016868061"
-                  data-testid="footer-phone"
-                  className="text-white/70 hover:text-accent transition-colors text-sm"
-                >
-                  +91 70168 68061
-                </a>
+                <div className="flex flex-col">
+                  <a
+                    href="tel:+917016868061"
+                    data-testid="footer-phone-1"
+                    className="text-white/70 hover:text-accent transition-colors text-sm"
+                  >
+                    +91 70168 68061
+                  </a>
+                  <a
+                    href="tel:+919054061354"
+                    data-testid="footer-phone-2"
+                    className="text-white/70 hover:text-accent transition-colors text-sm"
+                  >
+                    +91 90540 61354
+                  </a>
+                </div>
               </li>
               <li className="flex items-center space-x-3">
                 <EnvelopeSimple size={20} weight="fill" className="text-accent flex-shrink-0" />

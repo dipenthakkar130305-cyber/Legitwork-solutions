@@ -43,10 +43,17 @@ const Contact = () => {
               <h3 className="font-heading font-bold text-xl text-[#1A1A2E] mb-2">Phone</h3>
               <a
                 href="tel:+917016868061"
-                data-testid="contact-phone-link"
-                className="text-[#4A5568] hover:text-primary transition-colors"
+                data-testid="contact-phone-link-1"
+                className="text-[#4A5568] hover:text-primary transition-colors block"
               >
                 +91 70168 68061
+              </a>
+              <a
+                href="tel:+919054061354"
+                data-testid="contact-phone-link-2"
+                className="text-[#4A5568] hover:text-primary transition-colors block mt-2"
+              >
+                +91 90540 61354
               </a>
             </motion.div>
 
@@ -130,12 +137,8 @@ const Contact = () => {
               <h3 className="font-heading font-black text-2xl text-white mb-6">Working Hours</h3>
               <div className="space-y-4">
                 <div className="flex justify-between items-center pb-4 border-b border-white/20">
-                  <span className="text-white/80">Monday - Friday</span>
-                  <span className="text-white font-semibold">9:00 AM - 6:30 PM</span>
-                </div>
-                <div className="flex justify-between items-center pb-4 border-b border-white/20">
-                  <span className="text-white/80">Saturday</span>
-                  <span className="text-white font-semibold">9:00 AM - 2:00 PM</span>
+                  <span className="text-white/80">Monday - Saturday</span>
+                  <span className="text-white font-semibold">9:30 AM - 6:30 PM</span>
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="text-white/80">Sunday</span>

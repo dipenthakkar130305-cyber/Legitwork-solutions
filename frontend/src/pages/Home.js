@@ -430,7 +430,11 @@ const Home = () => {
             { url: 'https://customer-assets.emergentagent.com/job_hr-solutions-india/artifacts/ppp6n954_1751364808209-removebg-preview.png', name: 'Reliance' },
             { url: 'https://customer-assets.emergentagent.com/job_hr-solutions-india/artifacts/851xhrrn_Sun-Pharma-removebg-preview.png', name: 'Sun Pharma' },
             { url: 'https://customer-assets.emergentagent.com/job_hr-solutions-india/artifacts/467k72qk_1630611619585-removebg-preview.png', name: 'Suvidha India' },
-            ...Array(5).fill(null).map((_, i) => ({ placeholder: true, num: i + 6 }))
+            { url: 'https://customer-assets.emergentagent.com/job_hr-solutions-india/artifacts/jxanadgj_ADI-removebg-preview.png', name: 'Adani Airports' },
+            { url: 'https://customer-assets.emergentagent.com/job_hr-solutions-india/artifacts/j3o0sg2r_Torrent-Pharma-logo.png', name: 'Torrent Pharma' },
+            { url: 'https://customer-assets.emergentagent.com/job_hr-solutions-india/artifacts/15n56lzf_Zydus_Lifesciences.svg.png', name: 'Zydus Lifesciences' },
+            { url: 'https://customer-assets.emergentagent.com/job_hr-solutions-india/artifacts/ynn8pt40_Coca-Cola_logo.svg.png', name: 'Coca-Cola' },
+            { url: 'https://customer-assets.emergentagent.com/job_hr-solutions-india/artifacts/avg2bvjb_Allcargo_Logistics.png', name: 'Allcargo Logistics' },
           ].map((item, num) => (
             <div
               key={num}
@@ -438,16 +442,12 @@ const Home = () => {
               className="mx-8 bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow flex items-center justify-center"
               style={{ minWidth: '180px', height: '100px' }}
             >
-              {item.placeholder ? (
-                <div className="text-secondary font-bold text-sm">Client {item.num}</div>
-              ) : (
-                <img 
-                  src={item.url} 
-                  alt={item.name}
-                  className="max-w-full max-h-full object-contain"
-                  style={{ width: 'auto', height: 'auto', maxHeight: '70px', maxWidth: '150px' }}
-                />
-              )}
+              <img 
+                src={item.url} 
+                alt={item.name}
+                className="max-w-full max-h-full object-contain"
+                style={{ width: 'auto', height: 'auto', maxHeight: '70px', maxWidth: '150px' }}
+              />
             </div>
           ))}
         </Marquee>

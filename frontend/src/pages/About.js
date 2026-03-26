@@ -260,7 +260,10 @@ const About = () => {
             </h2>
           </motion.div>
 
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-4xl mx-auto relative">
+            {/* Vertical connecting line */}
+            <div className="absolute left-8 top-8 bottom-8 w-0.5 bg-gradient-to-b from-primary via-accent to-primary opacity-30"></div>
+            
             {milestones.map((milestone, index) => (
               <motion.div
                 key={index}
@@ -269,14 +272,14 @@ const About = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 data-testid={`milestone-${index}`}
-                className="flex items-start mb-12 last:mb-0"
+                className="flex items-start mb-12 last:mb-0 relative"
               >
-                <div className="flex-shrink-0 mr-6">
-                  <div className="w-16 h-16 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center text-white font-heading font-bold text-sm shadow-lg">
+                <div className="flex-shrink-0 mr-6 relative z-10">
+                  <div className="w-16 h-16 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center text-white font-heading font-bold text-sm shadow-lg ring-4 ring-white">
                     {milestone.year}
                   </div>
                 </div>
-                <div className="flex-grow pt-3">
+                <div className="flex-grow pt-3 bg-[#F8FAFB] rounded-2xl p-6 border border-[#0D4C73]/10">
                   <h3 className="font-heading font-bold text-xl text-[#1A1A2E] mb-2">{milestone.title}</h3>
                   <p className="text-[#4A5568] leading-relaxed">{milestone.description}</p>
                 </div>

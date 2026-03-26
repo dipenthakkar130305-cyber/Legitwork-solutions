@@ -379,14 +379,35 @@ const Home = () => {
             {whyChooseUs.map((item, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 20, scale: 0.9 }}
+                whileInView={{ opacity: 1, y: 0, scale: 1 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                transition={{ 
+                  duration: 0.5,
+                  delay: index * 0.15,
+                  ease: "easeOut"
+                }}
+                whileHover={{ 
+                  y: -8,
+                  transition: { duration: 0.3 }
+                }}
                 data-testid={`why-choose-card-${index}`}
-                className="flex flex-col items-center text-center p-6"
+                className="flex flex-col items-center text-center p-6 bg-[#F8FAFB] rounded-2xl border border-[#0D4C73]/10 card-hover"
               >
-                <div className="text-accent mb-4">{item.icon}</div>
+                <motion.div 
+                  className="text-accent mb-4"
+                  initial={{ scale: 0, rotate: -180 }}
+                  whileInView={{ scale: 1, rotate: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ 
+                    duration: 0.6,
+                    delay: index * 0.15 + 0.2,
+                    type: "spring",
+                    stiffness: 200
+                  }}
+                >
+                  {item.icon}
+                </motion.div>
                 <h3 className="font-heading font-bold text-lg text-[#1A1A2E] mb-2">{item.title}</h3>
                 <p className="text-[#4A5568] text-sm leading-relaxed">{item.description}</p>
               </motion.div>
@@ -403,15 +424,30 @@ const Home = () => {
           </div>
         </div>
         <Marquee gradient={false} speed={40}>
-          {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((num) => (
+          {[
+            { url: 'https://customer-assets.emergentagent.com/job_hr-solutions-india/artifacts/7mhvdywi_c145fb77e37a599d2eb2c67a37fa9dc6-removebg-preview.png', name: 'Waaree' },
+            { url: 'https://customer-assets.emergentagent.com/job_hr-solutions-india/artifacts/pwgitspv_images-removebg-preview.png', name: 'Excel' },
+            { url: 'https://customer-assets.emergentagent.com/job_hr-solutions-india/artifacts/ppp6n954_1751364808209-removebg-preview.png', name: 'Reliance' },
+            { url: 'https://customer-assets.emergentagent.com/job_hr-solutions-india/artifacts/851xhrrn_Sun-Pharma-removebg-preview.png', name: 'Sun Pharma' },
+            { url: 'https://customer-assets.emergentagent.com/job_hr-solutions-india/artifacts/467k72qk_1630611619585-removebg-preview.png', name: 'Suvidha India' },
+            ...Array(5).fill(null).map((_, i) => ({ placeholder: true, num: i + 6 }))
+          ].map((item, num) => (
             <div
               key={num}
-              data-testid={`client-logo-${num}`}
-              className="mx-8 bg-white rounded-xl p-6 shadow-sm opacity-50 hover:opacity-100 transition-opacity"
+              data-testid={`client-logo-${num + 1}`}
+              className="mx-8 bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow flex items-center justify-center"
+              style={{ minWidth: '180px', height: '100px' }}
             >
-              <div className="w-32 h-20 flex items-center justify-center text-secondary font-bold">
-                Client {num}
-              </div>
+              {item.placeholder ? (
+                <div className="text-secondary font-bold text-sm">Client {item.num}</div>
+              ) : (
+                <img 
+                  src={item.url} 
+                  alt={item.name}
+                  className="max-w-full max-h-full object-contain"
+                  style={{ width: 'auto', height: 'auto', maxHeight: '70px', maxWidth: '150px' }}
+                />
+              )}
             </div>
           ))}
         </Marquee>

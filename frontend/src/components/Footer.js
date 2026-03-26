@@ -12,7 +12,7 @@ import {
 
 const Footer = () => {
   return (
-    <footer data-testid="footer" className="bg-secondary text-white relative grain-texture">
+    <footer data-testid="footer" className="bg-[#0D4C73] text-white relative grain-texture">
       <div className="container mx-auto px-4 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* About Column */}
@@ -134,12 +134,60 @@ const Footer = () => {
           <div>
             <h3 className="font-heading font-bold text-lg mb-4">Our Services</h3>
             <ul className="space-y-3">
-              <li className="text-white/70 text-sm">Labour Law Compliance</li>
-              <li className="text-white/70 text-sm">Payroll Outsourcing</li>
-              <li className="text-white/70 text-sm">Contract Staffing</li>
-              <li className="text-white/70 text-sm">HR Consulting</li>
-              <li className="text-white/70 text-sm">Labour Law Audit</li>
-              <li className="text-white/70 text-sm">Licence & Registration</li>
+              <li>
+                <Link
+                  to="/services#compliance"
+                  data-testid="footer-service-compliance"
+                  className="text-white/70 hover:text-accent transition-colors text-sm"
+                >
+                  Labour Law Compliance
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/services#payroll"
+                  data-testid="footer-service-payroll"
+                  className="text-white/70 hover:text-accent transition-colors text-sm"
+                >
+                  Payroll Outsourcing
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/services#staffing"
+                  data-testid="footer-service-staffing"
+                  className="text-white/70 hover:text-accent transition-colors text-sm"
+                >
+                  Contract Staffing
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/services#consulting"
+                  data-testid="footer-service-consulting"
+                  className="text-white/70 hover:text-accent transition-colors text-sm"
+                >
+                  HR Consulting
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/services#audit"
+                  data-testid="footer-service-audit"
+                  className="text-white/70 hover:text-accent transition-colors text-sm"
+                >
+                  Labour Law Audit
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/services#licence"
+                  data-testid="footer-service-licence"
+                  className="text-white/70 hover:text-accent transition-colors text-sm"
+                >
+                  Licence & Registration
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -150,7 +198,7 @@ const Footer = () => {
               <li className="flex items-start space-x-3">
                 <MapPin size={20} weight="fill" className="text-accent mt-1 flex-shrink-0" />
                 <span className="text-white/70 text-sm">
-                  123, Business Hub, SG Highway,<br />Ahmedabad, Gujarat 380015
+                  A-1028, 10th Floor, Siddhi Vinayak Arcade,<br />Opp. A.P.M.C Vasna, Gupta Nagar,<br />Vasna, Ahmedabad 380007<br />Gujarat, India
                 </span>
               </li>
               <li className="flex items-center space-x-3">

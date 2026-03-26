@@ -84,7 +84,10 @@ const Contact = () => {
               </div>
               <h3 className="font-heading font-bold text-xl text-[#1A1A2E] mb-2">Office Address</h3>
               <p className="text-[#4A5568] leading-relaxed">
-                123, Business Hub, SG Highway,<br />Ahmedabad, Gujarat 380015
+                A-1028, 10th Floor, Siddhi Vinayak Arcade,<br />
+                Opp. A.P.M.C Vasna, Gupta Nagar,<br />
+                Vasna, Ahmedabad 380007<br />
+                Gujarat, India
               </p>
             </motion.div>
           </div>

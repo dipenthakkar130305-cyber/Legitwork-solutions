@@ -28,28 +28,32 @@ const About = () => {
 
   const team = [
     {
-      name: 'Rajesh Mehta',
-      designation: 'Founder & Managing Director',
-      bio: 'Over 20 years of experience in labour law consulting and compliance management.',
-      avatar: 'https://ui-avatars.com/api/?name=Rajesh+Mehta&background=00AEEF&color=fff&size=200',
+      name: 'Jainik Shah',
+      designation: 'Director/Founder',
+      bio: 'Over 15 years of experience in labour law consulting and compliance management.',
+      avatar: 'https://ui-avatars.com/api/?name=Jainik+Shah&background=00AEEF&color=fff&size=200',
+      isDirector: true,
     },
     {
-      name: 'Priya Kapoor',
-      designation: 'Head of HR Consulting',
-      bio: 'Specializes in organizational development and strategic HR advisory services.',
-      avatar: 'https://ui-avatars.com/api/?name=Priya+Kapoor&background=0D4C73&color=fff&size=200',
+      name: 'Hemang Shah',
+      designation: 'Executive Director',
+      bio: 'Strategic leader driving business growth and operational excellence with expertise in corporate governance.',
+      avatar: 'https://ui-avatars.com/api/?name=Hemang+Shah&background=00D4AA&color=fff&size=200',
+      isDirector: true,
     },
     {
       name: 'Amit Desai',
       designation: 'Compliance Manager',
       bio: 'Expert in statutory audits and implementation of labour law compliance frameworks.',
-      avatar: 'https://ui-avatars.com/api/?name=Amit+Desai&background=00D4AA&color=fff&size=200',
+      avatar: 'https://ui-avatars.com/api/?name=Amit+Desai&background=0D4C73&color=fff&size=200',
+      isDirector: false,
     },
     {
       name: 'Sneha Patel',
       designation: 'Payroll Operations Lead',
       bio: 'Manages end-to-end payroll processing for 50+ client organizations.',
-      avatar: 'https://ui-avatars.com/api/?name=Sneha+Patel&background=00AEEF&color=fff&size=200',
+      avatar: 'https://ui-avatars.com/api/?name=Sneha+Patel&background=0D4C73&color=fff&size=200',
+      isDirector: false,
     },
   ];
 
@@ -220,12 +224,18 @@ const About = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 data-testid={`team-card-${index}`}
-                className="bg-white rounded-2xl overflow-hidden shadow-[0_8px_30px_rgba(13,76,115,0.06)] card-hover"
+                className={`rounded-2xl overflow-hidden shadow-[0_8px_30px_rgba(13,76,115,0.06)] card-hover ${
+                  member.isDirector 
+                    ? 'bg-gradient-to-br from-primary/10 to-accent/10 border-2 border-primary/30' 
+                    : 'bg-white'
+                }`}
               >
                 <img src={member.avatar} alt={member.name} className="w-full h-48 object-cover" />
                 <div className="p-6">
                   <h3 className="font-heading font-bold text-lg text-[#1A1A2E] mb-1">{member.name}</h3>
-                  <p className="text-sm text-primary font-semibold mb-3">{member.designation}</p>
+                  <p className={`text-sm font-semibold mb-3 ${member.isDirector ? 'text-primary' : 'text-primary'}`}>
+                    {member.designation}
+                  </p>
                   <p className="text-sm text-[#4A5568] leading-relaxed">{member.bio}</p>
                 </div>
               </motion.div>

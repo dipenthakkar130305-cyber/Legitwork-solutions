@@ -1,0 +1,148 @@
+{
+  "theme": "light",
+  "typography": {
+    "headings": {
+      "family": "Chivo, 'DM Sans', sans-serif",
+      "weights": ["300", "700", "900"],
+      "styling": "tracking-tighter leading-none"
+    },
+    "body": {
+      "family": "Inter, 'Source Sans Pro', sans-serif",
+      "weights": ["400", "500", "600"],
+      "styling": "leading-relaxed"
+    },
+    "labels": {
+      "styling": "uppercase text-[10px] md:text-xs tracking-[0.2em] font-bold"
+    }
+  },
+  "colors": {
+    "primary": "#00AEEF",
+    "secondary": "#0D4C73",
+    "accent": "#00D4AA",
+    "background": {
+      "default": "#F8FAFB",
+      "dark_section": "#0D4C73"
+    },
+    "text": {
+      "primary": "#1A1A2E",
+      "inverse": "#FFFFFF",
+      "muted": "#4A5568"
+    },
+    "surface": {
+      "white": "#FFFFFF",
+      "glass": "bg-white/80 backdrop-blur-2xl border-b border-white/40 shadow-sm"
+    },
+    "rules": "Avoid generic SaaS flat colors. Use Deep Navy (#0D4C73) to create strong structural contrast for footers and heavy CTA sections. Keep the body crisp and light on #F8FAFB."
+  },
+  "visual_enhancers": {
+    "shadows": {
+      "card": "shadow-[0_8px_30px_rgb(13,76,115,0.06)]",
+      "hover": "shadow-[0_20px_40px_rgb(13,76,115,0.12)]"
+    },
+    "borders": {
+      "radius": "rounded-2xl",
+      "subtle": "border border-[#0D4C73]/10",
+      "strong": "border border-[#0D4C73]/20"
+    },
+    "texture": "Implement a subtle grain overlay on solid Navy sections to prevent digital flatness."
+  },
+  "layouts": {
+    "spacing": "Generous spacing. Use py-24 or py-32 for sections to convey premium B2B authority. Gap-8 or gap-12 for grids.",
+    "grids": {
+      "bento_marketing": "grid-cols-1 md:grid-cols-12 gap-8 with asymmetric spans (e.g. col-span-8 and col-span-4).",
+      "high_density": "grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6 for Services and Labour Laws cards."
+    }
+  },
+  "components_and_pages": {
+    "Home": {
+      "hero": "Asymmetric layout. Left side massive Chivo heading with tight tracking, right side floating image + animated stats overlay.",
+      "services": "Bento grid overview of services with clear hover states and Phosphor icons.",
+      "clients": "react-fast-marquee with grayscale client logos (opacity-50 hover:opacity-100 transition).",
+      "testimonials": "Shadcn Carousel with elegant overlapping quote cards."
+    },
+    "AboutUs": {
+      "mission_vision": "Overlapping Neumorphic or Swiss grid structure cards.",
+      "timeline": "Vertical staggered timeline with glowing accent nodes (#00D4AA).",
+      "team": "Image cards with deep navy gradients on hover revealing titles."
+    },
+    "LabourLaws": {
+      "content": "Shadcn Tabs or Accordion for the 4 labour codes. Must feel highly educational, clean, and legible. High density grid."
+    },
+    "Services": {
+      "layout": "Alternating left-right image/text sections for 6 detailed services, large numbering (01, 02)."
+    },
+    "Gallery": {
+      "layout": "Responsive masonry or irregular CSS grid for 12 images."
+    },
+    "Clients": {
+      "layout": "Grid of logos + embedded testimonials + animated stats counter."
+    },
+    "Blog": {
+      "layout": "Grid of 6 blog cards. Edge-to-edge image, crisp overline label, bold title, excerpt."
+    },
+    "Contact": {
+      "layout": "Contact info bento cards, embedded Google Map iframe, working hours. NO traditional form (redirect logic to WhatsApp)."
+    },
+    "Global": {
+      "whatsapp_fab": "Fixed floating WhatsApp button bottom-right with a pulse animation pointing to +91 7016868061.",
+      "navigation": "Sticky header with crystal glassmorphism effect (bg-white/80 backdrop-blur-2xl)."
+    }
+  },
+  "motion": {
+    "scroll": "Use Lenis (or similar) for smooth momentum scrolling.",
+    "entrances": "Framer Motion staggered fade-up (y: 20, opacity: 0 -> 1) for lists and grids.",
+    "interactions": "Hover states must slightly lift (-translate-y-1) and increase shadow. Buttons must have a slight scale effect on click."
+  },
+  "media": {
+    "icons": "@phosphor-icons/react (Duotone or regular weight for high-end B2B look)",
+    "image_urls": [
+      {
+        "url": "https://images.unsplash.com/photo-1769740333462-9a63bfa914bc?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NzF8MHwxfHNlYXJjaHwxfHxjb3Jwb3JhdGUlMjBidXNpbmVzcyUyMG9mZmljZSUyMG1lZXRpbmd8ZW58MHx8fHwxNzc0MTcyOTQ4fDA&ixlib=rb-4.1.0&q=85",
+        "category": "Hero / Home",
+        "description": "Business meeting with people around a conference table."
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1758518727707-b023e285b709?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NzF8MHwxfHNlYXJjaHwzfHxjb3Jwb3JhdGUlMjBidXNpbmVzcyUyMG9mZmljZSUyMG1lZXRpbmd8ZW58MHx8fHwxNzc0MTcyOTQ4fDA&ixlib=rb-4.1.0&q=85",
+        "category": "About Us / Services",
+        "description": "Four professionals in a modern office meeting space."
+      },
+      {
+        "url": "https://images.pexels.com/photos/7654117/pexels-photo-7654117.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "category": "Services / Team",
+        "description": "Diverse team collaborating in a modern office setting with laptops and documents."
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1752170080635-db168448f85d?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAxODF8MHwxfHNlYXJjaHwyfHxwcm9mZXNzaW9uYWwlMjB0ZWFtJTIwb2ZmaWNlfGVufDB8fHx8MTc3NDE3Mjk0OHww&ixlib=rb-4.1.0&q=85",
+        "category": "Gallery / Blog",
+        "description": "Three people collaborate around a table with laptops."
+      }
+    ]
+  },
+  "instructions_to_main_agent": [
+    "Build an 8-page React application using react-router-dom.",
+    "Do not use generic 'Inter' for headings. Use 'Chivo' or 'DM Sans' with tight tracking to convey strong B2B authority.",
+    "Use Phosphor icons for a sophisticated corporate look instead of generic Lucide defaults.",
+    "Implement a fixed floating WhatsApp CTA button at the bottom right that links to 'https://wa.me/917016868061'. Do not build a backend contact form.",
+    "Strictly follow the color palette: Primary #00AEEF, Secondary #0D4C73, Accent #00D4AA, Base #F8FAFB.",
+    "Use deep navy (#0D4C73) for high-contrast dark sections (like the footer, big CTA banners) and use white or #00AEEF for text/buttons over it.",
+    "Implement 'Crystal Glass' effect for the sticky navigation header.",
+    "Use framer-motion for page transitions and staggering card entrances on scroll.",
+    "Ensure all interactive elements have 'data-testid' attributes.",
+    "DO NOT use completely transparent backgrounds for elements with content underneath (like dropdowns).",
+    "Avoid typical generic corporate layouts; use overlapping bento boxes, asymmetric grid columns, and generous padding (py-24).",
+    "Embed a real Google Maps iframe on the Contact page."
+  ],
+  "UNIVERSAL_GUIDELINES_FOR_MAIN_AGENT": [
+    "Do not converge toward generic AI slop layouts. Create depth through layered design elements with z-index hierarchy.",
+    "Use glass-morphism effects with backdrop filters.",
+    "DO NOT apply universal transition like 'transition: all'. It breaks transforms.",
+    "DO NOT center align the app container (.App { text-align: center; } is banned).",
+    "Use 2-3x more spacing than feels comfortable.",
+    "Use pill-shaped or sharp modern buttons with interaction animations.",
+    "Add hover states, transitions, and entrance animations. Static = dead.",
+    "Never use AI assistant emoji characters for icons.",
+    "Components must use named exports, Pages must use default exports.",
+    "Use 'sonner' for toasts if notifications are needed.",
+    "Prioritize Shadcn UI for standard components but heavily customize them to fit the B2B 'Swiss Brutalist/Corporate Tech' theme."
+  ]
+}

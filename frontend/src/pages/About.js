@@ -69,16 +69,25 @@ const About = () => {
   return (
     <>
       <SEO
-        title="About Us"
-        description="Learn about LegitWork Solutions LLP - a team of seasoned labour law professionals and HR consultants with 15+ years of experience helping Indian businesses achieve 100% statutory compliance."
+        title="About LegitWork Solutions - 15+ Years of Compliance Expertise"
+        description="Meet the team at LegitWork Solutions - seasoned labour law professionals with 15+ years of experience helping Indian businesses achieve 100% statutory compliance. Founded in 2008, serving 100+ clients."
+        keywords="about company, labour law experts, HR consultants, compliance professionals, team"
         canonicalUrl="/about"
-        ogImage="https://images.unsplash.com/photo-1758518727707-b023e285b709?w=1200"
+        ogImage="https://images.unsplash.com/photo-1758518727707-b023e285b709?w=1200&h=630&fit=crop"
+        ogImageAlt="LegitWork Solutions team of labour law professionals"
         twitterSite="@legitwork"
         robots="index, follow"
         schema={{
+          "@context": "https://schema.org",
           "@type": "AboutPage",
           "name": "About LegitWork Solutions",
-          "description": "Labour law compliance, payroll outsourcing, and HR consulting services in India"
+          "url": "https://legitworksolutions.com/about",
+          "mainEntity": {
+            "@type": "Organization",
+            "name": "LegitWork Solutions LLP",
+            "founded": "2008",
+            "numberOfEmployees": "15+"
+          }
         }}
       />
       <div data-testid="about-page">
@@ -240,8 +249,8 @@ const About = () => {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 data-testid={`team-card-${index}`}
                 className={`rounded-2xl overflow-hidden shadow-[0_8px_30px_rgba(13,76,115,0.06)] card-hover ${
-                  member.isDirector 
-                    ? 'bg-gradient-to-br from-primary/10 to-accent/10 border-2 border-primary/30' 
+                  member.isDirector
+                    ? 'bg-gradient-to-br from-primary/10 to-accent/10 border-2 border-primary/30'
                     : 'bg-white'
                 }`}
               >
@@ -278,7 +287,7 @@ const About = () => {
           <div className="max-w-4xl mx-auto relative">
             {/* Vertical connecting line */}
             <div className="absolute left-8 top-8 bottom-8 w-0.5 bg-gradient-to-b from-primary via-accent to-primary opacity-30"></div>
-            
+
             {milestones.map((milestone, index) => (
               <motion.div
                 key={index}

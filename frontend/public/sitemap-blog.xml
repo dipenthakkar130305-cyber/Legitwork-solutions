@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Blog Sitemap - Future ready for blog articles -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+         xmlns:xhtml="http://www.w3.org/1999/xhtml"
+         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9"
+         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <!-- Blog index page -->
+  <url>
+    <loc>https://legitworksolutions.com/blog</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://legitworksolutions.com/blog"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <lastmod>2026-05-18</lastmod>
+  </url>
+
+  <!-- Future blog posts will be added dynamically here -->
+  <!-- Format for blog posts: -->
+  <!--
+  <url>
+    <loc>https://legitworksolutions.com/blog/{slug}</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://legitworksolutions.com/blog/{slug}"/>
+    <news:news>
+      <news:publication>
+        <news:name>LegitWork Solutions</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>{published_date}</news:publication_date>
+      <news:title>{article_title}</news:title>
+      <news:keywords>{keywords}</news:keywords>
+    </news:news>
+    <changefreq>never</changefreq>
+    <priority>0.7</priority>
+    <lastmod>{last_modified}</lastmod>
+    <image:image>
+      <image:loc>{featured_image_url}</image:loc>
+      <image:title>{article_title}</image:title>
+      <image:caption>{article_description}</image:caption>
+    </image:image>
+  </url>
+  -->
+
+</urlset>

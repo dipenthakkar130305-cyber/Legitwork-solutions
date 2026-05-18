@@ -66,16 +66,20 @@ const Blog = () => {
   return (
     <>
       <SEO
-        title="Blog"
-        description="Stay updated with the latest insights on labour law compliance, HR best practices, payroll management, and regulatory updates in India. Expert articles from LegitWork Solutions."
+        title="Blog - Labour Law Compliance & HR Insights for Indian Businesses"
+        description="Stay updated with expert articles on labour law compliance, HR best practices, payroll management, regulatory updates, and statutory requirements in India. LegitWork Solutions blog with actionable insights for business compliance."
+        keywords="blog, labour law news, HR tips, compliance updates, payroll insights, statutory requirements"
         canonicalUrl="/blog"
-        ogImage="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=1200"
+        ogImage="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=1200&h=630&fit=crop"
+        ogImageAlt="LegitWork Solutions blog - labour law and HR insights"
         twitterSite="@legitwork"
         robots="index, follow"
         schema={{
-          "@type": "CollectionPage",
+          "@context": "https://schema.org",
+          "@type": "Blog",
           "name": "LegitWork Solutions Blog",
-          "description": "Latest articles on labour law compliance and HR best practices"
+          "url": "https://legitworksolutions.com/blog",
+          "description": "Latest articles on labour law compliance and HR best practices for Indian businesses"
         }}
       />
       <div data-testid="blog-page">

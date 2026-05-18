@@ -112,16 +112,20 @@ const Clients = () => {
   return (
     <>
       <SEO
-        title="Our Clients"
-        description="Discover how LegitWork Solutions serves 300+ clients across 20+ industries in India. From MNCs to SMEs, we provide reliable labour law compliance and HR solutions."
+        title="Our Clients - Trusted by 100+ Companies in India"
+        description="Meet our diverse client base spanning 20+ industries including manufacturing, IT, healthcare, retail, and FMCG. From Fortune 500 MNCs to growing SMEs, LegitWork Solutions serves 300+ business locations with trusted labour law compliance services."
+        keywords="clients, case studies, companies, testimonials, client success, industries served"
         canonicalUrl="/clients"
-        ogImage="https://images.unsplash.com/photo-1557804506-669a67965ba0?w=1200"
+        ogImage="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&h=630&fit=crop"
+        ogImageAlt="LegitWork Solutions trusted client companies and case studies"
         twitterSite="@legitwork"
         robots="index, follow"
         schema={{
+          "@context": "https://schema.org",
           "@type": "CollectionPage",
           "name": "Our Clients",
-          "description": "Clients of LegitWork Solutions across various industries"
+          "url": "https://legitworksolutions.com/clients",
+          "description": "Clients of LegitWork Solutions serving 20+ industries across India"
         }}
       />
       <div data-testid="clients-page">

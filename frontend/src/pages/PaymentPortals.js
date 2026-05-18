@@ -7,16 +7,20 @@ const PaymentPortals = () => {
   return (
     <>
       <SEO
-        title="Payment Portals"
-        description="Access official government portals for EPF, ESIC, and Gujarat Labour Welfare Fund payments. Quick links to statutory contribution portals for Indian businesses."
+        title="Statutory Payment Portals - EPF, ESIC & Labour Welfare Fund Access"
+        description="Quick access to official government payment portals for EPF, ESIC, professional tax, and Gujarat Labour Welfare Fund contributions. Direct links to statutory compliance and payment systems for Indian businesses."
+        keywords="payment portals, EPF portal, ESIC portal, tax portal, statutory payments, government portals"
         canonicalUrl="/payment-portals"
-        ogImage="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1200"
+        ogImage="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&h=630&fit=crop"
+        ogImageAlt="Government statutory payment portals for EPF and ESIC"
         twitterSite="@legitwork"
-        robots="index, follow"
+        robots="noindex, follow"
         schema={{
+          "@context": "https://schema.org",
           "@type": "CollectionPage",
           "name": "Statutory Payment Portals",
-          "description": "Quick links to EPF, ESIC, and government payment portals"
+          "url": "https://legitworksolutions.com/payment-portals",
+          "description": "Quick access directory to EPF, ESIC, and government payment portals"
         }}
       />
       <div data-testid="payment-portals-page">

@@ -1,17 +1,25 @@
 # robots.txt for LegitWork Solutions
-# https://www.robotstxt.org/robotstxt.html
 
 User-agent: *
 Allow: /
 
-# Sitemap location
-Sitemap: https://legitworksolutions.com/sitemap.xml
+# Public pages
+Allow: /services
+Allow: /about
+Allow: /labour-laws
+Allow: /gallery
+Allow: /clients
+Allow: /blog
+Allow: /contact
 
-# Crawl-delay for polite crawling
-Crawl-delay: 1
-
-# Block API and internal routes
+# Block internal/private routes
+Disallow: /admin/
 Disallow: /api/
-Disallow: /*?
+Disallow: /private/
+Disallow: /.env
+Disallow: /node_modules/
 
-# Clean URLs - CRA uses client-side routing, handled by react-router-dom
+# Sitemap locations
+Sitemap: https://legitworksolutions.com/sitemap.xml
+Sitemap: https://legitworksolutions.com/sitemap-blog.xml
+Sitemap: https://legitworksolutions.com/sitemap-locations.xml

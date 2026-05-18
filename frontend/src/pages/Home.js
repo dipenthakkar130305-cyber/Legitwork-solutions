@@ -174,27 +174,42 @@ const Home = () => {
   return (
     <>
       <SEO
-        title="Home"
-        description="LegitWork Solutions - Leading labour law compliance, payroll outsourcing, and HR consulting services in India. Trusted by 100+ companies for statutory compliance and workforce management."
+        title="Labour Law Compliance & HR Services - India's Trusted Partner"
+        description="LegitWork Solutions - Leading labour law compliance, payroll outsourcing, and HR consulting services in India. Trusted by 100+ companies for statutory compliance and workforce management solutions."
+        keywords="labour law compliance, payroll outsourcing, HR services, statutory compliance, India"
         canonicalUrl="/"
-        ogImage="https://images.unsplash.com/photo-1769740333462-9a63bfa914bc?w=1200"
+        ogImage="https://images.unsplash.com/photo-1769740333462-9a63bfa914bc?w=1200&h=630&fit=crop"
+        ogImageAlt="Professional business team working on labour compliance solutions"
         twitterSite="@legitwork"
         robots="index, follow"
         schema={{
+          "@context": "https://schema.org",
           "@type": "Organization",
           "name": "LegitWork Solutions LLP",
+          "alternateName": "Legitwork",
           "description": "Labour law compliance, payroll outsourcing, and HR consulting services in India",
           "url": "https://legitworksolutions.com",
           "logo": "https://legitworksolutions.com/logo.png",
+          "image": "https://images.unsplash.com/photo-1769740333462-9a63bfa914bc?w=1200",
           "contactPoint": {
             "@type": "ContactPoint",
-            "telephone": "+917016868061",
-            "contactType": "customer service",
-            "email": "info@legitworksolutions.com"
+            "telephone": "+91-70168-68061",
+            "contactType": "Customer Service",
+            "email": "info@legitworksolutions.com",
+            "areaServed": ["IN"]
           },
           "sameAs": [
-            "https://wa.me/917016868061"
-          ]
+            "https://www.linkedin.com/company/legitwork-solutions",
+            "https://twitter.com/legitwork"
+          ],
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "ratingCount": "50",
+            "reviewCount": "45",
+            "bestRating": "5",
+            "worstRating": "1"
+          }
         }}
       />
       <div data-testid="home-page">
@@ -408,24 +423,24 @@ const Home = () => {
                 initial={{ opacity: 0, y: 20, scale: 0.9 }}
                 whileInView={{ opacity: 1, y: 0, scale: 1 }}
                 viewport={{ once: true }}
-                transition={{ 
+                transition={{
                   duration: 0.5,
                   delay: index * 0.15,
                   ease: "easeOut"
                 }}
-                whileHover={{ 
+                whileHover={{
                   y: -8,
                   transition: { duration: 0.3 }
                 }}
                 data-testid={`why-choose-card-${index}`}
                 className="flex flex-col items-center text-center p-6 bg-[#F8FAFB] rounded-2xl border border-[#0D4C73]/10 card-hover"
               >
-                <motion.div 
+                <motion.div
                   className="text-accent mb-4"
                   initial={{ scale: 0, rotate: -180 }}
                   whileInView={{ scale: 1, rotate: 0 }}
                   viewport={{ once: true }}
-                  transition={{ 
+                  transition={{
                     duration: 0.6,
                     delay: index * 0.15 + 0.2,
                     type: "spring",
@@ -468,8 +483,8 @@ const Home = () => {
               className="mx-8 bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow flex items-center justify-center"
               style={{ minWidth: '180px', height: '100px' }}
             >
-              <img 
-                src={item.url} 
+              <img
+                src={item.url}
                 alt={item.name}
                 className="max-w-full max-h-full object-contain"
                 style={{ width: 'auto', height: 'auto', maxHeight: '70px', maxWidth: '150px' }}

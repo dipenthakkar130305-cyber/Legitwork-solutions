@@ -114,16 +114,19 @@ const LabourLaws = () => {
   return (
     <>
       <SEO
-        title="Labour Laws"
-        description="Comprehensive guide to Indian labour laws including the four new labour codes, EPF, ESIC, PF, Gratuity, and other statutory regulations. Stay compliant with LegitWork Solutions."
+        title="Indian Labour Laws Guide - Codes, EPF, ESI, Gratuity & Compliance"
+        description="Comprehensive guide to Indian labour laws: Code on Wages 2019, Industrial Relations Code 2020, Social Security Code 2020, and Occupational Safety Code. Learn compliance requirements for EPF, ESI, gratuity, maternity benefits, and workplace regulations."
+        keywords="Indian labour laws, labour codes, EPF, ESI, gratuity, statutory compliance, workplace safety"
         canonicalUrl="/labour-laws"
-        ogImage="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1200"
+        ogImage="https://images.unsplash.com/photo-1450101499163-c8917c3971d7?w=1200&h=630&fit=crop"
+        ogImageAlt="Indian labour law regulations and compliance guide"
         twitterSite="@legitwork"
         robots="index, follow"
         schema={{
-          "@type": "CollectionPage",
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
           "name": "Indian Labour Laws Guide",
-          "description": "Comprehensive guide to Indian labour laws and regulations"
+          "url": "https://legitworksolutions.com/labour-laws"
         }}
       />
       <div data-testid="labour-laws-page">
@@ -437,7 +440,7 @@ const LabourLaws = () => {
                 </AccordionTrigger>
                 <AccordionContent>
                   <Accordion type="single" collapsible className="space-y-3 mt-4">{/* I'll add all 9 laws here - abbreviated for space */}
-                
+
                 <AccordionItem value="ss-1" className="bg-white border border-[#0D4C73]/10 rounded-xl mb-3 px-6">
                   <AccordionTrigger className="hover:no-underline">
                     <span className="font-heading font-bold text-[#1A1A2E]">The Employees' Compensation Act, 1923</span>
@@ -532,7 +535,7 @@ const LabourLaws = () => {
                 </AccordionTrigger>
                 <AccordionContent>
                   <Accordion type="single" collapsible className="space-y-3 mt-4">
-                
+
                 <AccordionItem value="osh-1" className="bg-white border border-[#0D4C73]/10 rounded-xl mb-3 px-6">
                   <AccordionTrigger className="hover:no-underline">
                     <span className="font-heading font-bold text-[#1A1A2E]">The Factories Act, 1948</span>

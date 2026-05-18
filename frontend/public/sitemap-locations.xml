@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Local Sitemap - Location-based pages for local SEO -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+         xmlns:xhtml="http://www.w3.org/1999/xhtml"
+         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <!-- Ahmedabad Office Page -->
+  <url>
+    <loc>https://legitworksolutions.com/office/ahmedabad</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://legitworksolutions.com/office/ahmedabad"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2026-05-18</lastmod>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1758518727707-b023e285b709?w=1200</image:loc>
+      <image:title>LegitWork Solutions - Ahmedabad Office</image:title>
+      <image:caption>Labour law compliance services in Ahmedabad, Gujarat</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Mumbai Office Page -->
+  <url>
+    <loc>https://legitworksolutions.com/office/mumbai</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://legitworksolutions.com/office/mumbai"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2026-05-18</lastmod>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1758518727707-b023e285b709?w=1200</image:loc>
+      <image:title>LegitWork Solutions - Mumbai Office</image:title>
+      <image:caption>Labour law compliance services in Mumbai, Maharashtra</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Location-specific service pages can be added here -->
+  <!-- Format: /services/{location} -->
+  <!-- Example: /services/ahmedabad, /services/mumbai, etc. -->
+
+</urlset>

@@ -7,16 +7,25 @@ const Contact = () => {
   return (
     <>
       <SEO
-        title="Contact Us"
-        description="Contact LegitWork Solutions for labour law compliance, payroll outsourcing, and HR consulting services in India. Reach us via phone, email, or visit our office."
+        title="Contact LegitWork Solutions - Get in Touch for Labour Law Compliance Help"
+        description="Contact LegitWork Solutions for expert labour law compliance, payroll outsourcing, and HR consulting services in India. Call +91-70168-68061, email info@legitworksolutions.com, or visit our Ahmedabad office."
+        keywords="contact, phone, email, office address, enquiry, support, Ahmedabad"
         canonicalUrl="/contact"
-        ogImage="https://images.unsplash.com/photo-1557804506-669a67965ba0?w=1200"
+        ogImage="https://images.unsplash.com/photo-1557804506-669a67965ba0?w=1200&h=630&fit=crop"
+        ogImageAlt="Contact LegitWork Solutions for labour compliance services"
         twitterSite="@legitwork"
         robots="index, follow"
         schema={{
+          "@context": "https://schema.org",
           "@type": "ContactPage",
           "name": "Contact LegitWork Solutions",
-          "description": "Contact information for labour law compliance services"
+          "url": "https://legitworksolutions.com/contact",
+          "mainEntity": {
+            "@type": "Organization",
+            "name": "LegitWork Solutions",
+            "email": "info@legitworksolutions.com",
+            "telephone": "+91-70168-68061"
+          }
         }}
       />
       <div data-testid="contact-page">

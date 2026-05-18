@@ -129,16 +129,19 @@ const Services = () => {
   return (
     <>
       <SEO
-        title="Our Services"
-        description="Explore LegitWork Solutions comprehensive services including labour law compliance management, payroll outsourcing, contract staffing, HR consulting, labour law audits, and licence registration services across India."
+        title="Professional HR & Labour Law Services - Compliance Solutions"
+        description="Discover comprehensive services: labour law compliance management, payroll outsourcing, contract staffing, HR consulting, labour law audits, and licence registration. Serving 100+ companies across India."
+        keywords="labour law services, payroll outsourcing, HR consulting, compliance management, India"
         canonicalUrl="/services"
-        ogImage="https://images.unsplash.com/photo-1557804506-669a67965ba0?w=1200"
+        ogImage="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&h=630&fit=crop"
+        ogImageAlt="Professional HR and labour law compliance services"
         twitterSite="@legitwork"
         robots="index, follow"
         schema={{
-          "@type": "CollectionPage",
-          "name": "Our Services",
-          "description": "Labour law compliance, payroll outsourcing, and HR consulting services"
+          "@context": "https://schema.org",
+          "@type": "ServiceCollection",
+          "name": "Professional Services",
+          "url": "https://legitworksolutions.com/services"
         }}
       />
       <div data-testid="services-page">
@@ -194,7 +197,7 @@ const Services = () => {
                     {service.title}
                   </h2>
                   <p className="text-[#4A5568] text-lg leading-relaxed mb-8">{service.description}</p>
-                  
+
                   <div className="bg-[#F8FAFB] rounded-2xl p-6 border border-[#0D4C73]/10">
                     <h3 className="font-heading font-bold text-lg text-[#1A1A2E] mb-4">What's Included:</h3>
                     <ul className="space-y-3">

@@ -88,106 +88,137 @@ const Gallery = () => {
     { id: 'workshops', label: 'Workshops' },
   ];
 
-  const filteredItems = activeFilter === 'all'
-    ? galleryItems
-    : galleryItems.filter(item => item.category === activeFilter);
+  const filteredItems =
+    activeFilter === 'all'
+      ? galleryItems
+      : galleryItems.filter((item) => item.category === activeFilter);
 
   return (
     <>
       <SEO
-        title="Gallery"
-        description="View our gallery to see the LegitWork Solutions team, office space, and events. Get a glimpse of our work culture and professional environment."
+        title="Gallery - LegitWork Solutions Office, Team & Events"
+        description="Explore our office locations, team collaboration, workshops, and events at LegitWork Solutions. See the workplace and people behind our labour law compliance and HR services in Ahmedabad and Mumbai."
+        keywords="gallery, office photos, team, workplace, events, workshops, office tour"
         canonicalUrl="/gallery"
-        ogImage="https://images.unsplash.com/photo-1557804506-669a67965ba0?w=1200"
+        ogImage="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&h=630&fit=crop"
+        ogImageAlt="LegitWork Solutions office, team and events gallery"
         twitterSite="@legitwork"
         robots="index, follow"
         schema={{
-          "@type": "ImageGallery",
-          "name": "LegitWork Solutions Gallery",
-          "description": "Photos of our team, office, and events"
+          '@context': 'https://schema.org',
+          '@type': 'ImageGallery',
+          name: 'LegitWork Solutions Gallery',
+          url: 'https://legitworksolutions.com/gallery',
+          description:
+            'Photo gallery of our office locations, team, and company events',
         }}
       />
+
       <div data-testid="gallery-page">
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-[#F8FAFB] via-white to-[#E6F7FF] py-20" aria-labelledby="gallery-hero-heading">
-        <div className="container mx-auto px-4 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center max-w-4xl mx-auto"
-          >
-            <div className="uppercase text-xs tracking-[0.2em] font-bold text-accent mb-4">Gallery</div>
-            <h1 id="gallery-hero-heading" className="font-heading font-black text-4xl sm:text-5xl lg:text-6xl tracking-tighter leading-none text-[#1A1A2E] mb-6">
-              A Glimpse Into Our Work
-            </h1>
-            <p className="text-lg text-[#4A5568] leading-relaxed">
-              Explore our events, team activities, and workplace culture through these moments.
-            </p>
-          </motion.div>
-        </div>
-      </section>
+        {/* Hero Section */}
+        <section
+          className="relative bg-gradient-to-br from-[#F8FAFB] via-white to-[#E6F7FF] py-20"
+          aria-labelledby="gallery-hero-heading"
+        >
+          <div className="container mx-auto px-4 lg:px-8">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="text-center max-w-4xl mx-auto"
+            >
+              <div className="uppercase text-xs tracking-[0.2em] font-bold text-accent mb-4">
+                Gallery
+              </div>
 
-      {/* Filter Tabs */}
-      <section className="py-12 bg-white border-b border-[#0D4C73]/10" aria-labelledby="gallery-filter-heading">
-        <div className="container mx-auto px-4 lg:px-8">
-          <h2 id="gallery-filter-heading" className="sr-only">Filter gallery by category</h2>
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="flex flex-wrap justify-center gap-3"
-            role="group"
-            aria-labelledby="gallery-filter-heading"
-          >
-            {filters.map((filter) => (
-              <button
-                key={filter.id}
-                onClick={() => setActiveFilter(filter.id)}
-                data-testid={`filter-${filter.id}`}
-                className={`px-6 py-3 rounded-full font-semibold text-sm transition-all btn-scale ${
-                  activeFilter === filter.id
-                    ? 'bg-primary text-white shadow-md'
-                    : 'bg-[#F8FAFB] text-[#4A5568] hover:bg-primary/10'
-                }`}
+              <h1
+                id="gallery-hero-heading"
+                className="font-heading font-black text-4xl sm:text-5xl lg:text-6xl tracking-tighter leading-none text-[#1A1A2E] mb-6"
               >
-                {filter.label}
-              </button>
-            ))}
-          </motion.div>
-        </div>
-      </section>
+                A Glimpse Into Our Work
+              </h1>
 
-      {/* Gallery Grid */}
-      <section className="py-24 bg-white">
-        <div className="container mx-auto px-4 lg:px-8">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {filteredItems.map((item, index) => (
-              <motion.div
-                key={item.id}
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.9 }}
-                transition={{ duration: 0.4, delay: index * 0.05 }}
-                data-testid={`gallery-item-${item.id}`}
-                className="group relative overflow-hidden rounded-2xl shadow-[0_8px_30px_rgba(13,76,115,0.06)] card-hover"
-              >
-                <img
-                  src={item.image}
-                  alt={item.label}
-                  className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-secondary/90 via-secondary/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
-                  <div className="p-6 w-full">
-                    <p className="text-white font-heading font-bold text-lg">{item.label}</p>
-                    <p className="text-accent text-xs uppercase tracking-wider mt-1">{item.category}</p>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
+              <p className="text-lg text-[#4A5568] leading-relaxed">
+                Explore our events, team activities, and workplace culture
+                through these moments.
+              </p>
+            </motion.div>
           </div>
-        </div>
-      </section>
+        </section>
+
+        {/* Filter Tabs */}
+        <section
+          className="py-12 bg-white border-b border-[#0D4C73]/10"
+          aria-labelledby="gallery-filter-heading"
+        >
+          <div className="container mx-auto px-4 lg:px-8">
+            <h2 id="gallery-filter-heading" className="sr-only">
+              Filter gallery by category
+            </h2>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="flex flex-wrap justify-center gap-3"
+              role="group"
+              aria-labelledby="gallery-filter-heading"
+            >
+              {filters.map((filter) => (
+                <button
+                  key={filter.id}
+                  onClick={() => setActiveFilter(filter.id)}
+                  data-testid={`filter-${filter.id}`}
+                  className={`px-6 py-3 rounded-full font-semibold text-sm transition-all btn-scale ${
+                    activeFilter === filter.id
+                      ? 'bg-primary text-white shadow-md'
+                      : 'bg-[#F8FAFB] text-[#4A5568] hover:bg-primary/10'
+                  }`}
+                >
+                  {filter.label}
+                </button>
+              ))}
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Gallery Grid */}
+        <section className="py-24 bg-white">
+          <div className="container mx-auto px-4 lg:px-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+              {filteredItems.map((item, index) => (
+                <motion.div
+                  key={item.id}
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.9 }}
+                  transition={{ duration: 0.4, delay: index * 0.05 }}
+                  data-testid={`gallery-item-${item.id}`}
+                  className="group relative overflow-hidden rounded-2xl shadow-[0_8px_30px_rgba(13,76,115,0.06)] card-hover"
+                >
+                  <img
+                    src={item.image}
+                    alt={item.label}
+                    loading="lazy"
+                    className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+
+                  <div className="absolute inset-0 bg-gradient-to-t from-secondary/90 via-secondary/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                    <div className="p-6 w-full">
+                      <p className="text-white font-heading font-bold text-lg">
+                        {item.label}
+                      </p>
+
+                      <p className="text-accent text-xs uppercase tracking-wider mt-1">
+                        {item.category}
+                      </p>
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
       </div>
     </>
   );
